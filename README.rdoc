@@ -3,6 +3,6 @@
 Simple rails app that demonstrates how to create a private messaging system.
 
 Feel free to clone this repo and if you have improvements, also feel free to submit a PR. You can read the tutorial
-at [http://goo.gl/rVasxY](http://goo.gl/rVasxY)
+at http://goo.gl/rVasxY
 
 == Thanks!
