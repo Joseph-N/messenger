@@ -3,8 +3,12 @@
   <div class="container text-center jumbotron">
     <h1>Inbox System Rails</h1>
     <% if user_signed_in? %>
+        <%= link_to "New Conversation", new_conversation_path, class: "btn btn-info btn-lg" %>
         <%= link_to "Go To Inbox", mailbox_inbox_path, class: "btn btn-primary btn-lg" %>
     <% else %>
+        <p>You can log in as default user in one window with email: <strong>default-user@email.com</strong>
+        and password: <strong>12345678</strong> then create an account on a separate window and emulate a conversation
+        between yourself and the default user.</p>
         <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-warning btn-lg" %>
     <% end %>
