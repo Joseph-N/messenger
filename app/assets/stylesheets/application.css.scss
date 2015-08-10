@@ -15,5 +15,10 @@
  *= require_self
  */
 
+  .push-right{
+    text-align: right;
+    padding-right: 10px;
+  }
+  
 @import 'bootstrap';
 @import 'bootstrap/theme';
