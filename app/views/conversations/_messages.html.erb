@@ -1,6 +1,23 @@
 <% @receipts.each do |receipt| %>
     <% message = receipt.message %>
     <div class="media">
+      <% if message.sender.name == current_user.name %>
+      <div class="media-body">
+        <div class="push-right">
+        <h4 class="media-heading">
+          <%= message.sender.name %> <br>
+          <small><b>Subject: </b><%= message.subject %></small><br>
+          <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+        </h4>
+        <%= message.body %>
+      </div>
+      </div>
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://placehold.it/64x64" alt="...">
+        </a>
+      </div>
+      <% else %>
       <div class="media-left">
         <a href="#">
           <img class="media-object" src="http://placehold.it/64x64" alt="...">
@@ -14,5 +31,6 @@
         </h4>
         <%= message.body %>
       </div>
+      <% end %>
     </div>
 <% end %>
